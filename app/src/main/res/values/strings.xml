@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AppSwim</string>
+    <string name="save">Save</string>
+    <string name="guardar">guardar</string>
+    <string name="borrar">borrar</string>
+    <string name="introduce_tu_nota">IN</string>
 </resources>

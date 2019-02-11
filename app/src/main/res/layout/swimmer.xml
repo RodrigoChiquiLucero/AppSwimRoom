@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/texto_nota"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/boton_guardar"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="@string/introduce_tu_nota"
+        android:inputType="textMultiLine" />
+
+    <Button
+        android:id="@+id/boton_guardar"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/boton_borrar"
+        android:text="@string/guardar" />
+
+    <Button
+        android:id="@+id/boton_borrar"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:text="@string/borrar" />
+
+</RelativeLayout>
