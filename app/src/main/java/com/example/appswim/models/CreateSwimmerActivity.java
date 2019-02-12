@@ -17,7 +17,7 @@ import com.example.appswim.database.SwimmerDatabase;
 
 public class CreateSwimmerActivity extends AppCompatActivity {
     private EditText mFirstNameEditText;
-    private EditText mLasttNameEditText;
+    private EditText mLastNameEditText;
     private EditText mGenreEditText;
     private EditText mAgeEditText;
     private EditText mHeightEditText;
@@ -39,7 +39,7 @@ public class CreateSwimmerActivity extends AppCompatActivity {
                 .getswimmerDao();
 
         mFirstNameEditText = findViewById(R.id.firstNameEditText);
-        mLasttNameEditText = findViewById(R.id.lastNameEditText);
+        mLastNameEditText = findViewById(R.id.lastNameEditText);
         mGenreEditText = findViewById(R.id.genreEditText);
         mAgeEditText = findViewById(R.id.ageEditText);
         mHeightEditText = findViewById(R.id.heightEditText);
@@ -50,7 +50,7 @@ public class CreateSwimmerActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String m_first_name = mFirstNameEditText.getText().toString();
-                String m_last_name = mLasttNameEditText.getText().toString();
+                String m_last_name = mLastNameEditText.getText().toString();
                 String m_genre = mGenreEditText.getText().toString();
                 String m_age = mAgeEditText.getText().toString();
                 String m_height = mHeightEditText.getText().toString();

@@ -16,8 +16,9 @@ public interface SwimmerDao {
     @Query("SELECT * FROM swimmer")
     List<Swimmer>getSwimmer();
 
-    @Query("SELECT * FROM swimmer WHERE mId LIKE :uuid")
-    Swimmer getSwimmer(String uuid);
+    @Query("SELECT * FROM swimmer WHERE mId = :id")
+    public Swimmer getSwimmerID(String id);
+
 
     @Insert
     public void addSwimmer(Swimmer swim);
@@ -27,5 +28,7 @@ public interface SwimmerDao {
 
     @Update
     public void updateSwimmer(Swimmer swim);
+
+
 
 }
