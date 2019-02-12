@@ -1,6 +1,5 @@
 package com.example.appswim;
 
-import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
@@ -16,9 +15,9 @@ public class Swimmer {
     public String m_first_name;
     public String m_last_name;
     public String m_genre;
-    public int m_age;
-    public int m_height;
-    public int m_weight;
+    public String m_age;
+    public String m_height;
+    public String m_weight;
     public String m_team;
 
     public Swimmer(){
@@ -46,40 +45,29 @@ public class Swimmer {
         return m_genre;
     }
 
-    public int getAge() {
+    public String getAge() {
         return m_age;
     }
-    public int getHeight(){
+
+    public String getHeight(){
         return m_height;
     }
 
-    public int getWeight(){
-        return m_weight;
-    }
+    public String getWeight(){ return m_weight; }
 
-    public String getTeam() {
-        return m_team;
-    }
+    public String getTeam() { return m_team; }
 
-    public void setFirst_name(String first_name){
-        m_first_name = first_name;
-    }
-    public void setLast_name(String last_name){
-        m_last_name = last_name;
-    }
-    public void setGenre(String genre){
-        m_genre = genre;
-    }
-    public void setAge(int age){
-        m_age = age;
-    }
-    public void setWeight(int weight){
-        m_weight = weight;
-    }
-    public void setHeight(int height){
-        m_height = height;
-    }
-    public void setTeam(String team){
-        m_team = team;
-    }
+    public void setFirst_name(String first_name){ m_first_name = first_name; }
+
+    public void setLast_name(String last_name) { m_last_name = last_name; }
+
+    public void setGenre(String genre){ m_genre = genre; }
+
+    public void setAge(String age){ m_age = age; }
+
+    public void setWeight(String weight){ m_weight = weight; }
+
+    public void setHeight(String height){ m_height = height; }
+
+    public void setTeam(String team){ m_team = team; }
 }

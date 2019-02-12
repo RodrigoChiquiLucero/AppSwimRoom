@@ -1,7 +1,13 @@
 <resources>
     <string name="app_name">AppSwim</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="Genre">Genre</string>
+    <string name="Age">Age</string>
+    <string name="Height">Height</string>
+    <string name="Weight">Weight</string>
+    <string name="Team">Team</string>
     <string name="save">Save</string>
-    <string name="guardar">guardar</string>
-    <string name="borrar">borrar</string>
-    <string name="introduce_tu_nota">IN</string>
+
+
 </resources>
