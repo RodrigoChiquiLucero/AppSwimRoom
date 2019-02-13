@@ -1,4 +1,4 @@
-/**
+/*
 
 package com.example.appswim.models;
 
@@ -58,3 +58,4 @@ public class SwimmerRecyclerAdapter extends RecyclerView.Adapter<SwimmerRecycler
 
     }
 }
+ */

@@ -1,0 +1,75 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "882930ac91c4229e14f4256bcfc89a25",
+    "entities": [
+      {
+        "tableName": "swimmer",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`mId` TEXT NOT NULL, `m_first_name` TEXT, `m_last_name` TEXT, `m_genre` TEXT, `m_age` TEXT, `m_height` TEXT, `m_weight` TEXT, `m_team` TEXT, PRIMARY KEY(`mId`))",
+        "fields": [
+          {
+            "fieldPath": "mId",
+            "columnName": "mId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "m_first_name",
+            "columnName": "m_first_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "m_last_name",
+            "columnName": "m_last_name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "m_genre",
+            "columnName": "m_genre",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "m_age",
+            "columnName": "m_age",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "m_height",
+            "columnName": "m_height",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "m_weight",
+            "columnName": "m_weight",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "m_team",
+            "columnName": "m_team",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "mId"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, \"882930ac91c4229e14f4256bcfc89a25\")"
+    ]
+  }
+}
