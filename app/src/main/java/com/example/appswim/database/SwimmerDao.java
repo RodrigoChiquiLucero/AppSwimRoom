@@ -21,13 +21,13 @@ public interface SwimmerDao {
 
 
     @Insert
-    public void addSwimmer(Swimmer swim);
+    public void addSwimmer(Swimmer... swim);
 
     @Delete
     public void deleteSwimmer(Swimmer swim);
 
     @Update
-    public void updateSwimmer(Swimmer swim);
+    public void updateSwimmer(Swimmer... swim);
 
 
 

@@ -106,7 +106,7 @@ public class UpdateSwimmerActivity extends AppCompatActivity {
             }
         });
     }
-    /*
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_update_options, menu);
@@ -125,5 +125,4 @@ public class UpdateSwimmerActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-    */
 }

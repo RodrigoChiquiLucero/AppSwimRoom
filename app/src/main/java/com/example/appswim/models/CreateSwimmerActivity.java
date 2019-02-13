@@ -45,6 +45,7 @@ public class CreateSwimmerActivity extends AppCompatActivity {
         mHeightEditText = findViewById(R.id.heightEditText);
         mWeightEditText = findViewById(R.id.weightEditText);
         mTeamEditText = findViewById(R.id.teamEditText);
+        mSaveButton = findViewById(R.id.saveButton);
 
         mSaveButton.setOnClickListener(new View.OnClickListener() {
             @Override
