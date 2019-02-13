@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -105,7 +106,7 @@ public class UpdateSwimmerActivity extends AppCompatActivity {
             }
         });
     }
-
+    /*
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_update_options, menu);
@@ -116,7 +117,7 @@ public class UpdateSwimmerActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.delete: {
-                mSwimmerDAO.delete(SWIMMER);
+                mSwimmerDAO.deleteSwimmer(SWIMMER);
                 setResult(RESULT_OK);
                 finish();
                 break;
@@ -124,4 +125,5 @@ public class UpdateSwimmerActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+    */
 }
