@@ -7,5 +7,5 @@ import com.example.appswim.Swimmer;
 
 @Database(entities = {Swimmer.class},version = 1)
 public abstract class SwimmerDatabase extends RoomDatabase {
-    public abstract SwimmerDao getswimmerDao();
+    public abstract SwimmerDao getSwimmerDao();
 }

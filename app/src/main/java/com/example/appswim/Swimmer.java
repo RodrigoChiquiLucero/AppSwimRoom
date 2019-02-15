@@ -4,33 +4,22 @@ import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 import android.support.annotation.NonNull;
 
-import java.util.UUID;
-
-
 @Entity(tableName = "swimmer")
 public class Swimmer {
-    @PrimaryKey
-    @NonNull
-    private String mId;
     public String m_first_name;
     public String m_last_name;
     public String m_genre;
+    @PrimaryKey
+    @NonNull
+    private String phoneNumber;
     public String m_age;
     public String m_height;
     public String m_weight;
     public String m_team;
 
-    public Swimmer(){
-        mId = UUID.randomUUID().toString();
-    }
-
     @NonNull
-    public String getId(){
-        return mId;
-    }
-
-    public void setId(@NonNull String id){
-        mId = id;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
     public String getFirst_name(){
@@ -58,6 +47,8 @@ public class Swimmer {
     public String getTeam() { return m_team; }
 
     public void setFirst_name(String first_name){ m_first_name = first_name; }
+
+    public void setPhoneNumber(@NonNull String phoneNumber) { this.phoneNumber = phoneNumber;}
 
     public void setLast_name(String last_name) { m_last_name = last_name; }
 

@@ -21,16 +21,16 @@ public class SwimmerRecyclerAdapter extends RecyclerView.Adapter<SwimmerRecycler
     // Creo que es una accion que llama a la clase y
     // pone los elementos en fila en la pantalla
 
-    interface ActionCallBack {
+    public interface ActionCallback {
         void onLongClickListener(Swimmer swimmer);
     }
 
     private Context context;
     private List<Swimmer> swimmerList;
     private int[] colors;
-    private ActionCallBack mActionCallbacks;
+    private ActionCallback mActionCallbacks;
 
-    SwimmerRecyclerAdapter(Swimmer swimmer, List<Swimmer> swimmerList, int[] colors) {
+    public SwimmerRecyclerAdapter(Context context, List<Swimmer> swimmerList, int[] colors) {
         this.context = context;
         this.swimmerList = swimmerList;
         this.colors = colors;
@@ -50,7 +50,7 @@ public class SwimmerRecyclerAdapter extends RecyclerView.Adapter<SwimmerRecycler
     @Override
     public int getItemCount(){return swimmerList.size();}
 
-    void updateData(List<Swimmer>swimmerList){
+    public void updateData(List<Swimmer>swimmerList){
         this.swimmerList = swimmerList;
         notifyDataSetChanged();
     }
@@ -93,5 +93,5 @@ public class SwimmerRecyclerAdapter extends RecyclerView.Adapter<SwimmerRecycler
         }
     }
 
-    void addActionCallback(ActionCallBack actionCallBack){mActionCallbacks = actionCallBack;}
+    public void addActionCallback(ActionCallback actionCallbacks){mActionCallbacks = actionCallbacks;}
 }

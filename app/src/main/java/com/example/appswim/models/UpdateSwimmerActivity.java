@@ -23,11 +23,13 @@ public class UpdateSwimmerActivity extends AppCompatActivity {
     public static String EXTRA_SWIMMER_ID = "swimmer_id";
     private EditText mFirstNameEditText;
     private EditText mLastNameEditText;
+    private EditText mPhoneNumberEditText;
     private EditText mGenreEditText;
     private EditText mAgeEditText;
     private EditText mHeightEditText;
     private EditText mWeightEditText;
     private EditText mTeamEditText;
+
     private Toolbar mToolbar;
     private Button mUpdateButton;
     private SwimmerDao mSwimmerDAO;
@@ -42,10 +44,11 @@ public class UpdateSwimmerActivity extends AppCompatActivity {
         mSwimmerDAO = Room.databaseBuilder(this, SwimmerDatabase.class, "db-swimmer")
                 .allowMainThreadQueries()
                 .build()
-                .getswimmerDao();
+                .getSwimmerDao();
 
         mFirstNameEditText = findViewById(R.id.firstNameEditText);
         mLastNameEditText = findViewById(R.id.lastNameEditText);
+        mPhoneNumberEditText = findViewById(R.id.phoneNumberEditText);
         mGenreEditText = findViewById(R.id.genreEditText);
         mAgeEditText = findViewById(R.id.ageEditText);
         mUpdateButton = findViewById(R.id.updateButton);
@@ -66,6 +69,7 @@ public class UpdateSwimmerActivity extends AppCompatActivity {
 
         mFirstNameEditText.setText(SWIMMER.getFirst_name());
         mLastNameEditText.setText(SWIMMER.getLast_name());
+        mPhoneNumberEditText.setText(SWIMMER.getPhoneNumber());
         mGenreEditText.setText(SWIMMER.getGenre());
         mAgeEditText.setText(SWIMMER.getAge());
         mHeightEditText.setText(SWIMMER.getHeight());
@@ -77,21 +81,23 @@ public class UpdateSwimmerActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String m_first_name = mFirstNameEditText.getText().toString();
                 String m_last_name = mLastNameEditText.getText().toString();
+                String phoneNumber = mPhoneNumberEditText.getText().toString();
                 String m_genre = mGenreEditText.getText().toString();
                 String m_age = mAgeEditText.getText().toString();
                 String m_height = mHeightEditText.getText().toString();
                 String m_weight = mWeightEditText.getText().toString();
                 String m_team = mTeamEditText.getText().toString();
 
-                if (m_first_name.length() == 0 || m_last_name.length() == 0 || m_genre.length() == 0
-                        || m_age.length() == 0 || m_height.length() == 0 || m_weight.length() == 0 ||
-                        m_team.length() == 0) {
+                if (m_first_name.length() == 0 || m_last_name.length() == 0|| phoneNumber.length() == 0
+                        || m_genre.length() == 0 || m_age.length() == 0 || m_height.length() == 0 || m_weight.length() == 0 ||
+                        m_team.length() == 0 ) {
                     Toast.makeText(UpdateSwimmerActivity.this, "Please make sure all details are correct", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
                 SWIMMER.setFirst_name(m_first_name);
                 SWIMMER.setLast_name(m_last_name);
+                SWIMMER.setPhoneNumber(phoneNumber);
                 SWIMMER.setGenre(m_genre);
                 SWIMMER.setAge(m_age);
                 SWIMMER.setHeight(m_height);

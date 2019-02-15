@@ -13,22 +13,21 @@ import java.util.List;
 @Dao
 public interface SwimmerDao {
 
-    @Query("SELECT * FROM swimmer")
-    List<Swimmer>getSwimmer();
-
-    @Query("SELECT * FROM swimmer WHERE mId = :id")
-    public Swimmer getSwimmerID(String id);
-
 
     @Insert
     public void addSwimmer(Swimmer... swim);
 
-    @Delete
-    public void deleteSwimmer(Swimmer swim);
-
     @Update
     public void updateSwimmer(Swimmer... swim);
 
+    @Delete
+    public void deleteSwimmer(Swimmer swimmer);
 
+
+    @Query("SELECT * FROM swimmer")
+    public List<Swimmer>getSwimmer();
+
+    @Query("SELECT * FROM swimmer WHERE phoneNumber = :number")
+    public Swimmer getSwimmerID(String number);
 
 }
