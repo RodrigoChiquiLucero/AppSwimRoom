@@ -15,8 +15,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".models.CreateSwimmerActivity" />
-        <activity android:name="models.UpdateSwimmerActivity"></activity>
+        <activity android:name=".CreateSwimmerActivity"/>
+        <activity android:name=".UpdateSwimmerActivity"></activity>
     </application>
 
 </manifest>

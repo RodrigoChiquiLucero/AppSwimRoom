@@ -6,7 +6,7 @@ import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
 import android.arch.persistence.room.Update;
 
-import com.example.appswim.Swimmer;
+import com.example.appswim.models.Swimmer;
 
 import java.util.List;
 

@@ -8,18 +8,14 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import com.example.appswim.database.SwimmerDao;
 
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 
-import com.example.appswim.database.SwimmerDatabase;
+
 import com.example.appswim.database.SwimmerDao;
-import com.example.appswim.Swimmer;
-import com.example.appswim.models.CreateSwimmerActivity;
-import com.example.appswim.models.SwimmerRecyclerAdapter;
-import com.example.appswim.models.UpdateSwimmerActivity;
+import com.example.appswim.database.SwimmerDatabase;
+import com.example.appswim.models.Swimmer;
+
 
 import java.util.ArrayList;
 
@@ -54,12 +50,13 @@ public class MainActivity extends AppCompatActivity {
                 ContextCompat.getColor(this, android.R.color.holo_blue_dark),
                 ContextCompat.getColor(this, android.R.color.holo_purple)};
 
-        mSwimmerRecyclerAdapter = new SwimmerRecyclerAdapter(this, new ArrayList<Swimmer>(), colors);
+        mSwimmerRecyclerAdapter = new SwimmerRecyclerAdapter(this,new ArrayList<Swimmer>(),colors);
         mSwimmerRecyclerAdapter.addActionCallback(new SwimmerRecyclerAdapter.ActionCallback() {
             @Override
             public void onLongClickListener(Swimmer swimmer) {
-                Intent intent = new Intent(MainActivity.this, CreateSwimmerActivity.class);
-                startActivityForResult(intent, RC_UPDATE_SWIMMER);
+                Intent intent = new Intent(MainActivity.this,UpdateSwimmerActivity.class);
+                intent.putExtra(UpdateSwimmerActivity.EXTRA_SWIMMER_ID,swimmer.getPhoneNumber());
+                startActivityForResult(intent,RC_UPDATE_SWIMMER);
             }
         });
 

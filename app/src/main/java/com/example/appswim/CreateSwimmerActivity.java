@@ -1,4 +1,4 @@
-package com.example.appswim.models;
+package com.example.appswim;
 
 import android.arch.persistence.room.Room;
 import android.database.sqlite.SQLiteConstraintException;
@@ -9,10 +9,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.appswim.R;
-import com.example.appswim.Swimmer;
 import com.example.appswim.database.SwimmerDao;
 import com.example.appswim.database.SwimmerDatabase;
+import com.example.appswim.models.Swimmer;
 
 
 public class CreateSwimmerActivity extends AppCompatActivity {
@@ -66,7 +65,7 @@ public class CreateSwimmerActivity extends AppCompatActivity {
                 if (m_first_name.length() == 0 || m_last_name.length() == 0 || phoneNumber.length() == 0 || m_genre.length() == 0
                 || m_age.length() == 0 || m_height.length() == 0 || m_weight.length() == 0 ||
                         m_team.length() == 0){
-                    Toast.makeText(CreateSwimmerActivity.this, "Please make sure all details are correct", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CreateSwimmerActivity.this, "Please make sure all details are correct Puto", Toast.LENGTH_SHORT).show();
                     return;
                 }
 

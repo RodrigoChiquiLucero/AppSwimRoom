@@ -1,18 +1,17 @@
 
 
-package com.example.appswim.models;
+package com.example.appswim;
 
 import android.content.Context;
 import android.graphics.drawable.GradientDrawable;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.app.AppCompatActivity;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.example.appswim.R;
-import com.example.appswim.Swimmer;
+import com.example.appswim.models.Swimmer;
 
 import java.util.List;
 
@@ -30,7 +29,7 @@ public class SwimmerRecyclerAdapter extends RecyclerView.Adapter<SwimmerRecycler
     private int[] colors;
     private ActionCallback mActionCallbacks;
 
-    public SwimmerRecyclerAdapter(Context context, List<Swimmer> swimmerList, int[] colors) {
+    SwimmerRecyclerAdapter(Context context, List<Swimmer> swimmerList, int[] colors) {
         this.context = context;
         this.swimmerList = swimmerList;
         this.colors = colors;
@@ -50,8 +49,8 @@ public class SwimmerRecyclerAdapter extends RecyclerView.Adapter<SwimmerRecycler
     @Override
     public int getItemCount(){return swimmerList.size();}
 
-    public void updateData(List<Swimmer>swimmerList){
-        this.swimmerList = swimmerList;
+    void updateData(List<Swimmer> swimmers){
+        this.swimmerList = swimmers;
         notifyDataSetChanged();
     }
 
@@ -93,5 +92,5 @@ public class SwimmerRecyclerAdapter extends RecyclerView.Adapter<SwimmerRecycler
         }
     }
 
-    public void addActionCallback(ActionCallback actionCallbacks){mActionCallbacks = actionCallbacks;}
+    void addActionCallback(ActionCallback actionCallbacks){mActionCallbacks = actionCallbacks;}
 }

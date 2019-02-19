@@ -1,22 +1,19 @@
-package com.example.appswim.models;
+package com.example.appswim;
 
 import android.arch.persistence.room.Room;
-import android.arch.persistence.room.RoomDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.appswim.R;
-import com.example.appswim.Swimmer;
 import com.example.appswim.database.SwimmerDao;
 import com.example.appswim.database.SwimmerDatabase;
+import com.example.appswim.models.Swimmer;
 
 public class UpdateSwimmerActivity extends AppCompatActivity {
 
@@ -77,6 +74,7 @@ public class UpdateSwimmerActivity extends AppCompatActivity {
         mTeamEditText.setText(SWIMMER.getTeam());
 
         mUpdateButton.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 String m_first_name = mFirstNameEditText.getText().toString();
