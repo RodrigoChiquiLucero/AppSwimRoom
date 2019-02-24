@@ -5,7 +5,10 @@ La idea de la app basicamente es tener una base de datos de tus nadadores. Las e
   1. Poder tener una lista de n nadadores
   2. Que, en cada nadador, tengamos un historial en las carreras que nado. Osea ejemplo seria :
         Igor Andruskiewitsch nado en estas 2 carreras : 50 metros crol, 100 Metros crol
+        
         En 50 crol tiene un historial asi :
+        
+        
     ID    Torneo(tournament)  Lugar(place)   MetroPileta(25 o 50)               Time          CuantoMejoro o emperoró
      1    "name"                 "name"              50                        35:04             0 
      2    "name"                 "name"              25                        34:04            -1 sec ( en verde)
