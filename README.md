@@ -52,6 +52,8 @@ La idea de la app basicamente es tener una base de datos de tus nadadores. Las e
     
     3. Entrenamientos
     
+    Aca podriamos hacer que ( por ahora) hacer como si fuese una nota donde se escriba el entrenamiento. 
+    Despues se podria agregar quienes fueron los nadadores participantes de este entrenamiento.
  
     
     4. Una parte que haya técnicas
