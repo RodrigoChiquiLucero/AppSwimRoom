@@ -61,6 +61,15 @@ La idea de la app basicamente es tener una base de datos de tus nadadores. Las e
     Basicamente va a ser todo string, comentando los estilos y como se nadan
     Despues recomendar ciertos videos de youtube(eso lo tengo que consultar con unos tipos que hacen video sobre eso).
     
+    5. Tabla de porcentaje
+    
+    Esta tabla coniste en calcular un porcentaje a la mejor marca que hizo la persona.
+    Ejemplo :
+    
+    Carrera  Tiempo  100%  95%  90% ...
+    
+    50 libre 27:00  27:00 28:12 28:40 ...  
     
     
+    Mas info http://www.nadamas.es/ritmo-de-nado-porcentajes/
         
