@@ -5,7 +5,7 @@ import android.arch.persistence.room.RoomDatabase;
 
 import com.example.appswim.models.Swimmer;
 
-@Database(entities = {Swimmer.class},version = 1)
+@Database(entities = {Swimmer.class},version = 5,exportSchema = false)
 public abstract class SwimmerDatabase extends RoomDatabase {
     public abstract SwimmerDao getSwimmerDao();
 }
