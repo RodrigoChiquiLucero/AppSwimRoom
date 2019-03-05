@@ -10,18 +10,12 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 
-
 import com.example.appswim.database.SwimmerDao
 import com.example.appswim.database.SwimmerDatabase
 import com.example.appswim.models.Swimmer
 
 
 import java.util.ArrayList
-
-
-
-
-
 
 
 class MainActivity : AppCompatActivity() {

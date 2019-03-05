@@ -33,9 +33,8 @@ class CreateSwimmerActivity : AppCompatActivity() {
         super.onCreate(saveInstanceState)
         setContentView(R.layout.activity_create_swimmer)
 
-        mSwimmerDao = Room.databaseBuilder<SwimmerDatabase>(this, SwimmerDatabase::class.java, "db-swimmer")
+        mSwimmerDao = Room.databaseBuilder(this, SwimmerDatabase::class.java, "db-swimmer")
                 .allowMainThreadQueries()
-                .fallbackToDestructiveMigration()
                 .build()
                 .swimmerDao
 

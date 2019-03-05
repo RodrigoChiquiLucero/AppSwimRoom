@@ -17,6 +17,10 @@ import com.example.appswim.database.SwimmerDatabase
 import com.example.appswim.models.Swimmer
 
 class UpdateSwimmerActivity : AppCompatActivity() {
+
+    companion object {
+        val EXTRA_SWIMMER_ID = "swimmer_id"
+    }
     private var mFirstNameEditText: EditText? = null
     private var mLastNameEditText: EditText? = null
     private var mPhoneNumberEditText: EditText? = null
@@ -122,10 +126,5 @@ class UpdateSwimmerActivity : AppCompatActivity() {
             }
         }
         return super.onOptionsItemSelected(item)
-    }
-
-    companion object {
-
-        var EXTRA_SWIMMER_ID = "swimmer_id"
     }
 }
