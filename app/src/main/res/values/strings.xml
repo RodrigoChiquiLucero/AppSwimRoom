@@ -4,7 +4,7 @@
     <string name="last_name">Last Name</string>
     <string name="phone_number">Phone Number</string>
     <string name="Genre">Genre</string>
-    <string name="Age">Age</string>
+    <string name="Age">Birthday</string>
     <string name="Height">Height</string>
     <string name="Weight">Weight</string>
     <string name="Update">Update</string>

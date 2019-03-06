@@ -81,18 +81,25 @@
                 android:inputType="phone" />
 
 
-
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:text="@string/Age" />
 
-            <EditText
-                android:id="@+id/ageEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="date" />
+            <Button
+                android:id="@+id/btnClickDate"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Select Date"
+                tools:ignore="OnClick" />
+
+            <TextView
+                android:id="@+id/dateTv"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Date" />
+
 
 
             <TextView

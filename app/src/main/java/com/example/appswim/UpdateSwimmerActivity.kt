@@ -19,7 +19,7 @@ import com.example.appswim.models.Swimmer
 class UpdateSwimmerActivity : AppCompatActivity() {
 
     companion object {
-        val EXTRA_SWIMMER_ID = "swimmer_id"
+        val EXTRA_SWIMMER_ID = "id"
     }
     private var mFirstNameEditText: EditText? = null
     private var mLastNameEditText: EditText? = null
