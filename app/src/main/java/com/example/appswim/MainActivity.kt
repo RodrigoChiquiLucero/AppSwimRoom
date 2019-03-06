@@ -25,6 +25,9 @@ class MainActivity : AppCompatActivity() {
     private var mAddSwimmerFloatingActionButton: FloatingActionButton? = null
     private var mSwimmerDao: SwimmerDao? = null
 
+    private val RC_CREATE_SWIMMER = 1
+    private val RC_UPDATE_SWIMMER = 2
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -35,20 +38,22 @@ class MainActivity : AppCompatActivity() {
                 .swimmerDao
 
         mSwimmerRecyclerView = findViewById(R.id.swimmerRecyclerView)
-        mSwimmerRecyclerView!!.layoutManager = LinearLayoutManager(this)
+        mSwimmerRecyclerView?.layoutManager = LinearLayoutManager(this)
         mAddSwimmerFloatingActionButton = findViewById(R.id.addSwimmerFloatingActionButton)
 
         val colors = intArrayOf(ContextCompat.getColor(this, R.color.colorAccent), ContextCompat.getColor(this, android.R.color.holo_red_light), ContextCompat.getColor(this, android.R.color.holo_orange_light), ContextCompat.getColor(this, android.R.color.holo_green_light), ContextCompat.getColor(this, android.R.color.holo_blue_dark), ContextCompat.getColor(this, android.R.color.holo_purple))
 
         mSwimmerRecyclerAdapter = SwimmerRecyclerAdapter(this, ArrayList(), colors)
-        mSwimmerRecyclerAdapter!!.addActionCallback(object : SwimmerRecyclerAdapter.ActionCallback {
+        mSwimmerRecyclerAdapter?.addActionCallback(object : SwimmerRecyclerAdapter.ActionCallback {
             override fun onLongClickListener(swimmer: Swimmer) {
+
                 val intent = Intent(this@MainActivity, UpdateSwimmerActivity::class.java)
-                intent.putExtra(UpdateSwimmerActivity.EXTRA_SWIMMER_ID, swimmer.PhoneNumber)
+                intent.putExtra(UpdateSwimmerActivity.EXTRA_SWIMMER_ID, swimmer.id_swimmer)
                 startActivityForResult(intent, RC_UPDATE_SWIMMER)
             }
         })
-        mSwimmerRecyclerView!!.adapter = mSwimmerRecyclerAdapter
+
+        mSwimmerRecyclerView?.setAdapter(mSwimmerRecyclerAdapter)
 
         mAddSwimmerFloatingActionButton!!.setOnClickListener {
             val intent = Intent(this@MainActivity, CreateSwimmerActivity::class.java)
@@ -62,6 +67,7 @@ class MainActivity : AppCompatActivity() {
         mSwimmerRecyclerAdapter!!.updateData(mSwimmerDao!!.swimmer)
     }
 
+    /*
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == RC_CREATE_SWIMMER && resultCode == Activity.RESULT_OK) {
@@ -70,11 +76,6 @@ class MainActivity : AppCompatActivity() {
             loadSwimmers()
         }
     }
-
-    companion object {
-
-        val RC_CREATE_SWIMMER = 1
-        val RC_UPDATE_SWIMMER = 2
-    }
+    */
 }
 

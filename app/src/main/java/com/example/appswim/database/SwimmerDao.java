@@ -27,7 +27,7 @@ public interface SwimmerDao {
     @Query("SELECT * FROM swimmer")
     public List<Swimmer>getSwimmer();
 
-    @Query("SELECT * FROM swimmer WHERE phoneNumber = :number")
-    public Swimmer getSwimmerID(String number);
+    @Query("SELECT * FROM swimmer WHERE id_swimmer = :id")
+    public Swimmer getSwimmerID(Integer id);
 
 }

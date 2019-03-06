@@ -62,7 +62,7 @@ class CreateSwimmerActivity : AppCompatActivity() {
             if (FirstName.length == 0 || LastName.length == 0 || PhoneNumber.length == 0 || Genre.length == 0
                     || Age.length == 0 || Height.length == 0 || Weight.length == 0 ||
                     Team.length == 0) {
-                Toast.makeText(this@CreateSwimmerActivity, "Please make sure all details are correct Puto", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@CreateSwimmerActivity, "Please make sure all details are correct", Toast.LENGTH_SHORT).show()
 
                 return@OnClickListener
             }

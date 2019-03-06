@@ -11,7 +11,11 @@ import android.widget.TextView
 
 import com.example.appswim.models.Swimmer
 
+
+
+
 class SwimmerRecyclerAdapter internal constructor(private val context: Context, private var swimmerList: List<Swimmer>?, private val colors: IntArray) : RecyclerView.Adapter<SwimmerRecyclerAdapter.ViewHolder>() {
+
     private var mActionCallbacks: ActionCallback? = null
 
     interface ActionCallback {

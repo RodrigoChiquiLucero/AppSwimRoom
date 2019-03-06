@@ -57,7 +57,7 @@ class UpdateSwimmerActivity : AppCompatActivity() {
 
         mToolbar = findViewById(R.id.toolbar)
 
-        SWIMMER = mSwimmerDAO!!.getSwimmerID(intent.getStringExtra(EXTRA_SWIMMER_ID))
+        SWIMMER = mSwimmerDAO!!.getSwimmerID(intent.getIntExtra(EXTRA_SWIMMER_ID,0))
 
         initViews()
     }
