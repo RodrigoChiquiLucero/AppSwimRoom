@@ -1,6 +1,6 @@
 package com.example.appswim
 
-import android.annotation.SuppressLint
+
 import android.app.Activity
 import android.app.DatePickerDialog
 import android.arch.persistence.room.Room
@@ -10,7 +10,6 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import android.widget.Button
-import android.widget.DatePicker
 import android.widget.EditText
 import android.widget.Toast
 
@@ -29,7 +28,6 @@ class CreateSwimmerActivity : AppCompatActivity() {
     private var mHeightEditText: EditText? = null
     private var mWeightEditText: EditText? = null
     private var mTeamEditText: EditText? = null
-
     private var mSaveButton: Button? = null
     private var mSwimmerDao: SwimmerDao? = null
 
@@ -45,7 +43,9 @@ class CreateSwimmerActivity : AppCompatActivity() {
         val year = c.get(Calendar.YEAR)
 
         btnClickDate.setOnClickListener {
-            val dpd = DatePickerDialog(this,android.R.style.Theme_Holo_Light_Dialog,DatePickerDialog.OnDateSetListener{view, mYear,mMonth,mDay->dateTv.text =(""+mDay+"/"+mMonth + "/" + mYear)},
+            val dpd = DatePickerDialog(this,android.R.style.Theme_DeviceDefault_Light,
+                    DatePickerDialog.OnDateSetListener{view, mYear,mMonth,
+                                                       mDay->dateTv.text =(""+mDay+"/"+mMonth + "/" + mYear)},
                     year,month,day)
 
             dpd.show()
@@ -78,7 +78,7 @@ class CreateSwimmerActivity : AppCompatActivity() {
 
 
             if (FirstName.length == 0 || LastName.length == 0 || PhoneNumber.length == 0 || Genre.length == 0
-                    || Age.length == 0 || Height.length == 0 || Weight.length == 0 ||
+                    || Age.length == 0 || Height.length == 0 || Weight.length == 0 || Age.length == 0 ||
                     Team.length == 0) {
                 Toast.makeText(this@CreateSwimmerActivity, "Please make sure all details are correct", Toast.LENGTH_SHORT).show()
 
@@ -107,4 +107,6 @@ class CreateSwimmerActivity : AppCompatActivity() {
         })
     }
 }
+
+
 
