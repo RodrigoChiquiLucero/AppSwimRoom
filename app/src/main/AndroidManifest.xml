@@ -17,6 +17,8 @@
         </activity>
         <activity android:name=".CreateSwimmerActivity"/>
         <activity android:name=".UpdateSwimmerActivity"></activity>
+        <activity android:name=".SwimmerActivity"></activity>
+
     </application>
 
 </manifest>

@@ -7,9 +7,10 @@
     tools:context="com.example.appswim.SwimmerActivity">
 
     <android.support.design.widget.AppBarLayout
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:title="FreeSwim"
+        app:title="My Swimmers"
         app:titleTextColor="@android:color/white">
 
     </android.support.design.widget.AppBarLayout>

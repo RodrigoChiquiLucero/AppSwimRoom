@@ -14,21 +14,11 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/swimmerRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    <Button
+        android:id="@+id/addSwimmerButton"
+        android:layout_width="110dp"
+        android:layout_height="134dp"
+        android:text="@string/Myswimmer" />
 
-    </android.support.v7.widget.RecyclerView>
-
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/addSwimmerFloatingActionButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
-        app:fabSize="normal"
-        android:src="@drawable/ic_add"/>
 
 </android.support.design.widget.CoordinatorLayout>
