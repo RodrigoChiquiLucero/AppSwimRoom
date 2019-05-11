@@ -1,24 +1,19 @@
 package com.example.appswim
 
-import android.app.Activity
 import android.arch.persistence.room.Room
 import android.content.Intent
+import android.os.Bundle
 import android.support.design.widget.FloatingActionButton
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
-import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
-
 import com.example.appswim.database.SwimmerDao
 import com.example.appswim.database.SwimmerDatabase
 import com.example.appswim.models.Swimmer
-
-
 import java.util.ArrayList
 
-
-class MainActivity : AppCompatActivity() {
+class SwimmerActivity : AppCompatActivity() {
 
     private var mSwimmerRecyclerView: RecyclerView? = null
     private var mSwimmerRecyclerAdapter: SwimmerRecyclerAdapter? = null
@@ -47,7 +42,7 @@ class MainActivity : AppCompatActivity() {
         mSwimmerRecyclerAdapter?.addActionCallback(object : SwimmerRecyclerAdapter.ActionCallback {
             override fun onLongClickListener(swimmer: Swimmer) {
 
-                val intent = Intent(this@MainActivity, UpdateSwimmerActivity::class.java)
+                val intent = Intent(this@SwimmerActivity, UpdateSwimmerActivity::class.java)
                 intent.putExtra(UpdateSwimmerActivity.EXTRA_SWIMMER_ID, swimmer.id_swimmer)
                 startActivityForResult(intent, RC_UPDATE_SWIMMER)
             }
@@ -56,7 +51,7 @@ class MainActivity : AppCompatActivity() {
         mSwimmerRecyclerView?.setAdapter(mSwimmerRecyclerAdapter)
 
         mAddSwimmerFloatingActionButton!!.setOnClickListener {
-            val intent = Intent(this@MainActivity, CreateSwimmerActivity::class.java)
+            val intent = Intent(this@SwimmerActivity, CreateSwimmerActivity::class.java)
             startActivityForResult(intent, RC_CREATE_SWIMMER)
         }
 
