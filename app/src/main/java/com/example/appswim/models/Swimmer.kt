@@ -16,4 +16,3 @@ data class Swimmer (
     var Weight: String,
     var Team: String
 )
-

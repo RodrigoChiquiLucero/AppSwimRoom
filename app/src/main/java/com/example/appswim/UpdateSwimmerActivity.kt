@@ -92,19 +92,14 @@ class UpdateSwimmerActivity : AppCompatActivity() {
                 return@OnClickListener
             }
 
-            SWIMMER = Swimmer(
-                    FirstName = FirstName,
-                    LastName = LastName,
-                    PhoneNumber = PhoneNumber,
-                    Genre = Genre,
-                    Age = Age,
-                    Height = Height,
-                    Weight = Weight,
-                    Team = Team
-                    )
-
-
-            //Insertar en la bd
+            SWIMMER!!.FirstName = FirstName
+            SWIMMER!!.LastName = LastName
+            SWIMMER!!.PhoneNumber = PhoneNumber
+            SWIMMER!!.Genre = Genre
+            SWIMMER!!.Age = Age
+            SWIMMER!!.Height = Height
+            SWIMMER!!.Weight = Weight
+            SWIMMER!!.Team = Team
 
             mSwimmerDAO!!.updateSwimmer(SWIMMER)
             setResult(Activity.RESULT_OK)
