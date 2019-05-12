@@ -14,7 +14,9 @@ import android.widget.Button
 import com.example.appswim.database.SwimmerDao
 import com.example.appswim.database.SwimmerDatabase
 import com.example.appswim.SwimmerActivity
-import com.example.appswim.models.Swimmer
+import com.example.appswim.CreateSwimmerActivity
+import com.example.appswim.SwimmerRecyclerAdapter
+
 
 
 
@@ -23,7 +25,7 @@ class MainActivity : AppCompatActivity() {
     private var mAddSwimmerButton: Button? = null
     private var mSwimmerDao: SwimmerDao? = null
 
-    private val RC_CREATE_SWIMMER = 1
+    private val RC_LIST_SWIMMER = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -38,8 +40,8 @@ class MainActivity : AppCompatActivity() {
         mAddSwimmerButton = findViewById(R.id.addSwimmerButton)
 
         mAddSwimmerButton!!.setOnClickListener {
-            val intent = Intent(this@MainActivity, CreateSwimmerActivity::class.java)
-            startActivityForResult(intent, RC_CREATE_SWIMMER)
+            val intent = Intent(this@MainActivity, SwimmerActivity::class.java)
+            startActivityForResult(intent, RC_LIST_SWIMMER)
         }
     }
 

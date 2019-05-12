@@ -25,9 +25,10 @@ class SwimmerActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_swimmer)
 
-        mSwimmerDao = Room.databaseBuilder(this, SwimmerDatabase::class.java, "db-swimmer")
+        mSwimmerDao = Room.databaseBuilder(this,
+                SwimmerDatabase::class.java, "db-swimmer")
                 .allowMainThreadQueries()
                 .build()
                 .swimmerDao
@@ -61,7 +62,6 @@ class SwimmerActivity : AppCompatActivity() {
     private fun loadSwimmers() {
         mSwimmerRecyclerAdapter!!.updateData(mSwimmerDao!!.swimmer)
     }
-
 
     /*
     override fun onActivityResult(requestCode: Int, resultCode: Int
