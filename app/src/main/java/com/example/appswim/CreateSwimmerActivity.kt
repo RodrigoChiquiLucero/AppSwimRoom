@@ -56,7 +56,6 @@ class CreateSwimmerActivity : AppCompatActivity() {
                 .build()
                 .swimmerDao
 
-
         mFirstNameEditText = findViewById(R.id.firstNameEditText)
         mLastNameEditText = findViewById(R.id.lastNameEditText)
         mGenreEditText = findViewById(R.id.genreEditText)
@@ -76,15 +75,27 @@ class CreateSwimmerActivity : AppCompatActivity() {
             val Weight = mWeightEditText!!.text.toString()
             val Team = mTeamEditText!!.text.toString()
 
-
-            if (FirstName.length == 0 || LastName.length == 0 || PhoneNumber.length == 0 || Genre.length == 0
-                    || Age.length == 0 || Height.length == 0 || Weight.length == 0 || Age.length == 0 ||
-                    Team.length == 0) {
-                Toast.makeText(this@CreateSwimmerActivity, "Please make sure all details are correct", Toast.LENGTH_SHORT).show()
-
-                return@OnClickListener
-            }
-
+            if(FirstName.length == 0){Toast.makeText(this@CreateSwimmerActivity,
+                    "Please complete Firstname", Toast.LENGTH_SHORT).show()
+                return@OnClickListener}
+            else if(LastName.length == 0) {Toast.makeText(this@CreateSwimmerActivity,
+                    "Please complete LastName", Toast.LENGTH_SHORT).show()
+                return@OnClickListener}
+            else if(PhoneNumber.length == 0){Toast.makeText(this@CreateSwimmerActivity,
+                    "Please complete PhoneNumber", Toast.LENGTH_SHORT).show()
+                return@OnClickListener}
+            else if (Age.length == 0){Toast.makeText(this@CreateSwimmerActivity,
+                    "Please select Age", Toast.LENGTH_SHORT).show()
+                return@OnClickListener}
+            else if(Height.length == 0){Toast.makeText(this@CreateSwimmerActivity,
+                    "Please complete Height", Toast.LENGTH_SHORT).show()
+                return@OnClickListener}
+            else if(Weight.length == 0){Toast.makeText(this@CreateSwimmerActivity,
+                    "Please complete Weight", Toast.LENGTH_SHORT).show()
+                return@OnClickListener}
+            else if(Team.length == 0){Toast.makeText(this@CreateSwimmerActivity,
+                    "Please complete Team", Toast.LENGTH_SHORT).show()
+                return@OnClickListener}
 
             val swimmer = Swimmer(
                     FirstName = FirstName,

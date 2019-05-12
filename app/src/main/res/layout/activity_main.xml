@@ -19,13 +19,21 @@
 
         </android.support.v7.widget.Toolbar>
 
-    </android.support.design.widget.AppBarLayout>t>
+    </android.support.design.widget.AppBarLayout>
 
     <Button
         android:id="@+id/addSwimmerButton"
-        android:layout_width="110dp"
-        android:layout_height="134dp"
-        android:text="@string/Myswimmer" />
+        android:layout_width="322dp"
+        android:layout_height="84dp"
+        android:layout_gravity="center"
+        android:backgroundTint="#4E9AD5"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/Myswimmer"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="italic" />
 
 
 </android.support.design.widget.CoordinatorLayout>

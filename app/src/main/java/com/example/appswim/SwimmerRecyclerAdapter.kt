@@ -14,7 +14,9 @@ import com.example.appswim.models.Swimmer
 
 
 class SwimmerRecyclerAdapter internal constructor(private val context: Context,
-                                                  private var swimmerList: List<Swimmer>?, private val colors: IntArray) : RecyclerView.Adapter<SwimmerRecyclerAdapter.ViewHolder>() {
+                                                  private var swimmerList: List<Swimmer>?,
+                                                  private val colors: IntArray) :
+        RecyclerView.Adapter<SwimmerRecyclerAdapter.ViewHolder>() {
 
     private var mActionCallbacks: ActionCallback? = null
 
@@ -23,7 +25,8 @@ class SwimmerRecyclerAdapter internal constructor(private val context: Context,
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.item_recycler_swimmer, parent, false)
+        val view = LayoutInflater.from(context).inflate(R.layout.item_recycler_swimmer,
+                parent, false)
         return ViewHolder(view)
     }
 
@@ -41,7 +44,8 @@ class SwimmerRecyclerAdapter internal constructor(private val context: Context,
     }
 
     // ViewHolder
-    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView), View.OnLongClickListener {
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView),
+            View.OnLongClickListener {
 
         private val mNameTextView: TextView
         private val mInitialsTextView: TextView
