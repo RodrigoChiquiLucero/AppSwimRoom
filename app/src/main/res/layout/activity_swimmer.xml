@@ -2,19 +2,25 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.appswim.SwimmerActivity">
 
     <android.support.design.widget.AppBarLayout
-        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:title="My Swimmers"
-        app:titleTextColor="@android:color/white">
+        android:layout_height="wrap_content">
+
+    <android.support.v7.widget.Toolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    app:title="MySwimmers"
+    app:titleTextColor="@android:color/white">
+
+    </android.support.v7.widget.Toolbar>
 
     </android.support.design.widget.AppBarLayout>
-
     <android.support.v7.widget.RecyclerView
         android:id="@+id/swimmerRecyclerView"
         android:layout_width="match_parent"
