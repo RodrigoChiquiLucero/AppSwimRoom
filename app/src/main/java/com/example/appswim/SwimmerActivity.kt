@@ -1,5 +1,6 @@
 package com.example.appswim
 
+import android.app.Activity
 import android.arch.persistence.room.Room
 import android.content.Intent
 import android.os.Bundle
@@ -63,10 +64,9 @@ class SwimmerActivity : AppCompatActivity() {
         mSwimmerRecyclerAdapter!!.updateData(mSwimmerDao!!.swimmer)
     }
 
-    /*
-    override fun onActivityResult(requestCode: Int, resultCode: Int
 
-    , data: Intent) {
+    override fun onActivityResult(requestCode: Int, resultCode: Int
+    , data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == RC_CREATE_SWIMMER && resultCode == Activity.RESULT_OK) {
             loadSwimmers()
@@ -74,6 +74,6 @@ class SwimmerActivity : AppCompatActivity() {
             loadSwimmers()
         }
     }
-    */
+
 }
 
