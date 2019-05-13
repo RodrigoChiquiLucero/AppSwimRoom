@@ -9,15 +9,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:label="MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CreateSwimmerActivity"/>
-        <activity android:name=".UpdateSwimmerActivity"></activity>
-        <activity android:name=".SwimmerActivity">
+        <activity android:name=".CreateSwimmerActivity"
+            android:label="CreateSwimmerActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".UpdateSwimmerActivity"
+            android:label="UpdateSwimmerActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name=".SwimmerActivity"
+            android:label="SwimmerActivity"
+            android:screenOrientation="portrait">
         </activity>
 
     </application>
