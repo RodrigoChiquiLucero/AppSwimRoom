@@ -31,3 +31,4 @@ public interface SwimmerDao {
     public Swimmer getSwimmerID(Integer id);
 
 }
+
