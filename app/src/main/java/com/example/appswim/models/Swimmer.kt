@@ -1,9 +1,15 @@
 package com.example.appswim.models
 
+
 import android.arch.persistence.room.Entity
+import android.arch.persistence.room.ForeignKey
 import android.arch.persistence.room.PrimaryKey
 
-@Entity(tableName = "swimmer")
+@Entity(tableName = "swimmer",foreignKeys = arrayOf(ForeignKey(entity = Races::class,
+        parentColumns = arrayOf("id_swimmer"),
+        childColumns = arrayOf("id_race"),
+        onDelete = ForeignKey.CASCADE)))
+
 data class Swimmer (
     @PrimaryKey(autoGenerate = true)
     var id_swimmer: Int = 0,
@@ -16,3 +22,4 @@ data class Swimmer (
     var Weight: String,
     var Team: String
 )
+

@@ -2,18 +2,14 @@ package com.example.appswim.models
 
 import android.arch.persistence.room.Entity
 import android.arch.persistence.room.PrimaryKey
-import java.text.DateFormat
 import java.util.*
 
 enum class Styles(){
     Butterfly,Backstroke,Breaststroke,Freestyle;
-
     override fun toString(): String{
         return super.toString()
     }
 }
-
-
 
 @Entity(tableName = "races")
 data class Races (
@@ -24,3 +20,4 @@ data class Races (
         var time : Date,
         var Style: Styles
 )
+
