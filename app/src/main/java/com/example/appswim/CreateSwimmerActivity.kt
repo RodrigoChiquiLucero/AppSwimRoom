@@ -43,10 +43,10 @@ class CreateSwimmerActivity : AppCompatActivity() {
         val year = c.get(Calendar.YEAR)
 
         btnClickDate.setOnClickListener {
-            val dpd = DatePickerDialog(this,android.R.style.Theme_DeviceDefault_Light,
+            val dpd = DatePickerDialog(this,android.R.style.Theme_Holo_Light_Dialog,
                     DatePickerDialog.OnDateSetListener{view, mYear,mMonth,
-                                                       mDay->dateTv.text =(""+mDay+"/"+mMonth + "/" + mYear)},
-                    year,month,day)
+                                                       mDay->dateTv.text =
+                            ("My birthday is "+mDay+"/"+mMonth + "/" + mYear)}, year,month,day)
 
             dpd.show()
         }
