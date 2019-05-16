@@ -3,6 +3,7 @@
     <string name="app_name">AppSwim</string>
     <string name="first_name">First Name</string>
     <string name="last_name">Last Name</string>
+    <string name="nationality">Nationality</string>
     <string name="phone_number">Phone Number</string>
     <string name="Genre">Genre</string>
     <string name="Age">Birthday</string>

@@ -9,6 +9,7 @@ data class Swimmer (
     var id_swimmer: Int = 0,
     var FirstName: String,
     var LastName: String,
+    var Nationality: String,
     var Genre: String,
     var PhoneNumber: String,
     var Age: String,

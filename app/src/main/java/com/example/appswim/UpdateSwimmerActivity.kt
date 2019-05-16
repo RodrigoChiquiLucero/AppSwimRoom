@@ -23,6 +23,7 @@ class UpdateSwimmerActivity : AppCompatActivity() {
     }
     private var mFirstNameEditText: EditText? = null
     private var mLastNameEditText: EditText? = null
+    private var mNationalityEditText: EditText? = null
     private var mPhoneNumberEditText: EditText? = null
     private var mGenreEditText: EditText? = null
     private var mAgeEditText: EditText? = null
@@ -47,6 +48,7 @@ class UpdateSwimmerActivity : AppCompatActivity() {
 
         mFirstNameEditText = findViewById(R.id.firstNameEditText)
         mLastNameEditText = findViewById(R.id.lastNameEditText)
+        mNationalityEditText = findViewById(R.id.nationalityEditText)
         mPhoneNumberEditText = findViewById(R.id.phoneNumberEditText)
         mGenreEditText = findViewById(R.id.genreEditText)
         mAgeEditText = findViewById(R.id.ageEditText)
@@ -68,6 +70,7 @@ class UpdateSwimmerActivity : AppCompatActivity() {
 
         mFirstNameEditText!!.setText(SWIMMER!!.FirstName)
         mLastNameEditText!!.setText(SWIMMER!!.LastName)
+        mNationalityEditText!!.setText(SWIMMER!!.Nationality)
         mPhoneNumberEditText!!.setText(SWIMMER!!.PhoneNumber)
         mGenreEditText!!.setText(SWIMMER!!.Genre)
         mAgeEditText!!.setText(SWIMMER!!.Age)
@@ -78,6 +81,7 @@ class UpdateSwimmerActivity : AppCompatActivity() {
         mUpdateButton!!.setOnClickListener(View.OnClickListener {
             val FirstName = mFirstNameEditText!!.text.toString()
             val LastName = mLastNameEditText!!.text.toString()
+            val Nationality = mNationalityEditText!!.text.toString()
             val PhoneNumber = mPhoneNumberEditText!!.text.toString()
             val Genre = mGenreEditText!!.text.toString()
             val Age = mAgeEditText!!.text.toString()
@@ -94,6 +98,7 @@ class UpdateSwimmerActivity : AppCompatActivity() {
 
             SWIMMER!!.FirstName = FirstName
             SWIMMER!!.LastName = LastName
+            SWIMMER!!.Nationality = Nationality
             SWIMMER!!.PhoneNumber = PhoneNumber
             SWIMMER!!.Genre = Genre
             SWIMMER!!.Age = Age

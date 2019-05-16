@@ -5,7 +5,7 @@ import android.arch.persistence.room.RoomDatabase
 
 import com.example.appswim.models.Swimmer
 
-@Database(entities = [Swimmer::class], version = 4)
+@Database(entities = [Swimmer::class], version = 5)
 abstract class SwimmerDatabase : RoomDatabase() {
     abstract val swimmerDao: SwimmerDao
 }

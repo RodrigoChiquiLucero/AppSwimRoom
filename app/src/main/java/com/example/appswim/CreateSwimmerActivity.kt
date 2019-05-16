@@ -23,6 +23,7 @@ class CreateSwimmerActivity : AppCompatActivity() {
 
     private var mFirstNameEditText: EditText? = null
     private var mLastNameEditText: EditText? = null
+    private var mNationalityEditText: EditText? = null
     private var mPhoneNumberEditText: EditText? = null
     private var mGenreEditText: EditText? = null
     private var mHeightEditText: EditText? = null
@@ -58,6 +59,7 @@ class CreateSwimmerActivity : AppCompatActivity() {
 
         mFirstNameEditText = findViewById(R.id.firstNameEditText)
         mLastNameEditText = findViewById(R.id.lastNameEditText)
+        mNationalityEditText = findViewById(R.id.nationalityEditText)
         mGenreEditText = findViewById(R.id.genreEditText)
         mPhoneNumberEditText = findViewById(R.id.phoneNumberEditText)
         mHeightEditText = findViewById(R.id.heightEditText)
@@ -68,6 +70,7 @@ class CreateSwimmerActivity : AppCompatActivity() {
         mSaveButton!!.setOnClickListener(View.OnClickListener {
             val FirstName = mFirstNameEditText!!.text.toString()
             val LastName = mLastNameEditText!!.text.toString()
+            val Nationality = mNationalityEditText!!.text.toString()
             val Genre = mGenreEditText!!.text.toString()
             val PhoneNumber = mPhoneNumberEditText!!.text.toString()
             val Age = dateTv.text.toString()
@@ -100,6 +103,7 @@ class CreateSwimmerActivity : AppCompatActivity() {
             val swimmer = Swimmer(
                     FirstName = FirstName,
                     LastName = LastName,
+                    Nationality = Nationality,
                     Genre = Genre,
                     PhoneNumber = PhoneNumber,
                     Age = Age,
