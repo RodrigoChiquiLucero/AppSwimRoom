@@ -1,4 +1,4 @@
-<resources>
+ <resources>
     <!-- Attributes Swimmer -->
     <string name="app_name">AppSwim</string>
     <string name="first_name">First Name</string>
@@ -16,4 +16,10 @@
     <string name="delete">Delete</string>
     <string name="Myswimmer">My Swimmers</string>
     <string name="Birthday">Select Date</string>
+
+    <!-- Text Button-->
+    <string name="Menu">Menu</string>
+    <string name="FindSwimmer"> Find Swimmer</string>
+    <string name="AddSwimmer"> Add Swimmer</string>
+    <string name="EditSwimmer">Edit Swimmer</string>
 </resources>

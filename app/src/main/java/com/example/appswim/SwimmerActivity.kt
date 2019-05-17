@@ -4,7 +4,6 @@ import android.app.Activity
 import android.arch.persistence.room.Room
 import android.content.Intent
 import android.os.Bundle
-import android.support.design.widget.FloatingActionButton
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
@@ -12,13 +11,14 @@ import android.support.v7.widget.RecyclerView
 import com.example.appswim.database.SwimmerDao
 import com.example.appswim.database.SwimmerDatabase
 import com.example.appswim.models.Swimmer
+import com.github.clans.fab.FloatingActionButton
 import java.util.ArrayList
 
 class SwimmerActivity : AppCompatActivity() {
 
     private var mSwimmerRecyclerView: RecyclerView? = null
     private var mSwimmerRecyclerAdapter: SwimmerRecyclerAdapter? = null
-    private var mAddSwimmerFloatingActionButton: FloatingActionButton? = null
+    private var mAddSwimmerFloatingActionButton: FloatingActionButton?  = null
     private var mSwimmerDao: SwimmerDao? = null
 
     private val RC_CREATE_SWIMMER = 1
