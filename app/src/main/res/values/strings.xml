@@ -22,4 +22,5 @@
     <string name="FindSwimmer"> Find Swimmer</string>
     <string name="AddSwimmer"> Add Swimmer</string>
     <string name="EditSwimmer">Edit Swimmer</string>
+    <string name="Search">Search</string>
 </resources>
