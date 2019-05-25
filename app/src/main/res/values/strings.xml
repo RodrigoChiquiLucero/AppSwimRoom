@@ -23,4 +23,12 @@
     <string name="AddSwimmer"> Add Swimmer</string>
     <string name="EditSwimmer">Edit Swimmer</string>
     <string name="Search">Search</string>
+     
+     <!-- Attributes Race -->
+     
+     <string name="Distance"> Distance</string>
+     <string name="Style">Style</string>
+     <string name="Time"> Time</string>
+     <string name="Place"> Place</string>
+
 </resources>
