@@ -43,17 +43,14 @@
                 android:layout_height="wrap_content"
                 android:inputType="textPersonName"/>
 
-            <TextView
+
+            <Spinner
+                android:id="@+id/SpinnerStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:text="@string/Style" />
-
-            <EditText
-                android:id="@+id/StyleEditText"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:inputType="textPersonName" />
+                android:prompt="@string/Style"
+                >
+            </Spinner>
 
             <TextView
                 android:layout_width="wrap_content"
